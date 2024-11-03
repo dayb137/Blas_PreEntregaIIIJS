@@ -39,30 +39,13 @@ function mostrarCarrito(){
         alert("El carrito esta vacio.");
         console.log("El carrito esta vacio.");
     }else{
-        alert("Este es el contenido de tu carrito");
-        console.log("Contenido del carrito");
-        for (let i = 1; i <= cantidadProductos; i++){
-            // Accedemos a las variables segun el contador
-            let nombre = "Producto" + i + nombre;
-            let precio = "producto" + i + precio;
-            let cantidad = "producto " + i + cantidad;
-        }
-
-        alert("Total de productos:", cantidadProductos);
-        alert("Total a pagar: $", total);
-
-        
-        
-        console.log("Total de productos:", cantidadProductos);
-        console.log("Total a pagar: $", total);
-
-
-
-    
+        alert("Total de productos:" + cantidadProductos + "\nTotal a pagar:$" + total);
+       
+        console.log("Total de productos:"+ cantidadProductos);
+        console.log("Total a pagar: $"+ total);
 
     }
-
-
+    
 }   
 
 //FUNCION PARA FINALIZAR LA COMPRA 
@@ -76,7 +59,7 @@ function finalizarcompra(){
     mostrarCarrito();
 
     let confirmar = prompt("¿Desea confirmar la compra? (si/no)");
-        if (confirmacion === "si"){
+        if (confirmar === "si"){
             alert("Compra realizada con exito. Muchas gracias! ")
         }
 
