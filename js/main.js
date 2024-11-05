@@ -29,7 +29,7 @@ function agregarProducto(){
                    total += subtotal;
                    cantidadProductos += cantidad;
 
-    alert("El producto: " + nombre + " \nPrecio:$ " + precio + "\nCantidad: " + cantidad + " Subtotal: "+ subtotal + "\nSe agrego con exito a tu carrito");
+    alert("El producto: " + nombre + " \nPrecio:$ " + precio + "\nCantidad: " + cantidad + "\nSubtotal: "+ subtotal + "\nSe agrego con exito a tu carrito");
     console.log("El producto: " + nombre + " Precio:$  " + precio + "Cantidad: " + cantidad + " Subtotal:$ " + subtotal);                
 
     
