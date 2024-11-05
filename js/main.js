@@ -1,3 +1,8 @@
+/**Realice un simulador de un carrito de compras donde el usuario a traves de un menu, puede acceder a difrentes
+ funciones como; agregar productos, sumarlos y realizar una compra si lo desea 
+*/
+
+
 let total = 0
 let cantidadProductos = 0;
 
@@ -24,8 +29,8 @@ function agregarProducto(){
                    total += subtotal;
                    cantidadProductos += cantidad;
 
-    alert("El producto: " + nombre + " Precio:$" + precio + "Cantidad: " + cantidad + " Subtotal:$" + subtotal);
-    console.log("El producto: " + nombre + " Precio:$" + precio + "Cantidad: " + cantidad + " Subtotal:$" + subtotal);                
+    alert("El producto: " + nombre + " \nPrecio:$ " + precio + "\nCantidad: " + cantidad + " Subtotal: "+ subtotal + "\nSe agrego con exito a tu carrito");
+    console.log("El producto: " + nombre + " Precio:$  " + precio + "Cantidad: " + cantidad + " Subtotal:$ " + subtotal);                
 
     
     
@@ -39,37 +44,45 @@ function mostrarCarrito(){
         alert("El carrito esta vacio.");
         console.log("El carrito esta vacio.");
     }else{
-        alert("Total de productos:" + cantidadProductos + "\nTotal a pagar:$" + total);
+        alert("Total de productos: " + cantidadProductos + "\nTotal a pagar:$ " + total);
        
-        console.log("Total de productos:"+ cantidadProductos);
-        console.log("Total a pagar: $"+ total);
+        console.log("Total de productos:"+ cantidadProductos + "\nTotal a pagar:$ " + total);
 
     }
     
+    console.log(mostrarCarrito)
 }   
 
 //FUNCION PARA FINALIZAR LA COMPRA 
 
-function finalizarcompra(){
+function finalizarCompra(){
     if (cantidadProductos === 0){
         alert("El carrito esta vacio. No se puede realizar la compra");
-       return;
+        return;
+        
     }
+    console.log(finalizarCompra)
+    
 
     mostrarCarrito();
 
     let confirmar = prompt("¿Desea confirmar la compra? (si/no)");
         if (confirmar === "si"){
             alert("Compra realizada con exito. Muchas gracias! ")
-        }
-
-        else{
+            
+            //Vaciamos el carrito (cada vez que se finaliza una compra el carrito se reinicia)
+            cantidadProductos = 0;
+            total = 0;
+            
+        }else{
             alert("Compra cancelada");
         }
+        
+        console.log(confirmar)
 
 }
 
-//MENU PRINCIPAL (segun la opcion elegfida llama a cada funcion)
+//MENU PRINCIPAL (segun la opcion elegida por el usuario llama a cada una de las funciones)
 
 function menu() {
     let opcion;
@@ -81,14 +94,15 @@ function menu() {
         }else if(opcion ==="2"){
                 mostrarCarrito();
         }else if(opcion === "3"){
-                finalizarcompra();
+                finalizarCompra();
         }else if(opcion === "4"){
-                alert("Gracias visitarnos")
+                alert("Gracias por visitarnos, vuelva pronto! ")
         }else{
-            alert("opcion no valida intentelo nuevamente ")
+            alert("Opcion no valida intentelo nuevamente (Ingrese el nº de la opcion a la qeud desees ingresar)")
         }
     } while(opcion !== "4");
 }
 
 
 menu();
+
