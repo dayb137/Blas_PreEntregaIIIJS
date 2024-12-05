@@ -3,15 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreEntregaI-JS</title>
+    <title>Mi carrito - Blas Pre-EntregaIII JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        .carrito-contenedor{
+            margin-top:20px;
+        }
+
+        .producto{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .producto button{
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .producto button:hover {
+            background-color: darkred;
+        }
+
+        #totalCarrito{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+
+
+        
+
+       
+    </style>
 </head>
 <body>
+    <h1>Carrito de Compras</h1>
 
-    <h1> Pre-Entrega I - JavaScript - Dayana Blas - </h1>
+<input type="text" id="busqueda" placeholder="Buscar producto">
+<button id="buscar">Buscar</button>
+    
+
+    <form id="formAgregarProducto">
+        <input type="text" id="nombreProducto" placeholder="Nombre del producto" required>
+        <input type="number" id = "precioProducto" placeholder="Precio" required>
+        <input type="number" id = "cantidadProducto" placeholder="Cantidad"> 
+        
+        <button type="submit"> Agregar al carrito</button>
+        
+        <button id="vaciarCarrito">Vaciar Carrito</button>
+
+
+    </form>
+
+    <div class ="carrito-contenedor" id ="carrito-contenedor">
+
+
+
+
+    </div>
+
+    <div id="totalCarrito"> Total: $0.00</div>
     
 
 
-<script src="js/main.js"></script>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
