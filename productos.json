@@ -1,0 +1,23 @@
+[
+    { "id": 1,
+     "nombre": "Banana",
+      "precio": 20, 
+      "cantidad": 1,
+      "sotck": 10
+
+    },
+
+    { "id": 2,
+     "nombre": "Palta",
+      "precio": 50, "cantidad": 1,
+      "sotck": 10
+
+     },
+
+    { "id": 3,
+     "nombre": "Leche",
+      "precio": 80,
+       "cantidad": 1,
+       "sotck": 10
+     }
+]
